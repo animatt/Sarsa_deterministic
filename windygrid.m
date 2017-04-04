@@ -50,7 +50,6 @@ while converging
         % policy evaluation
         SA = sub2ind(size(Q), ep(1, 1), ep(2, 1), ep(3, 1), ep(4, 1));
         SAnext = sub2ind(size(Q), row, col, rstep, cstep);
-        
         Q(SA) = Q(SA) + alpha * (-1 + Q(SAnext) - Q(SA));
         
         % policy improvement
